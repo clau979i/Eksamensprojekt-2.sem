@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om</title>
+    <link rel="stylesheet" href="index-style.css">
+    <link rel="stylesheet" href="om.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo-sissel">
+            <a href="index.html">
+                <img src="img/headerdarkgreen.svg" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <div id="menuknap-mobile">☰</div>
+            <ul id="mobile-nav" class="hidden">
+                <li class="drop-down">
+                    <span>Galleri</span>
+                    <a href="ubegraensetoplag.html">Ubegrænset oplag</a>
+                    <a href="specialoplag.html">Special oplag</a>
+                    <a href="originaler.html">Originaler</a>
+
+                </li>
+                <li class="drop-down"><span><a href="galleri.html">Galleri</a></span>
+                    <a href="galleri.html">
+                        Galleri</a>
+
+                </li>
+
+                <li class="drop-down">
+                    <span>Om</span>
+                    <a href="om.html">Hvem er jeg?</a>
+                    <div class="dropdown-content">
+                        <a href="om.html">Hvem er jeg?</a>
+                        <a href="om.html"></a>
+                    </div>
+                </li>
+                <li class="drop-down"><span><a href="kontakt.html">Kontakt</a></span>
+
+                </li>
+            </ul>
+
+            <ul id="desktop">
+                <li class="drop-down"><a href="kontakt.html">Kontakt</a>
+
+
+                </li>
+                <li class="drop-down">
+                    <a href="om.html">Om</a>
+                    <div class="dropdown-content">
+                        <a href="om.html">Hvem er jeg?</a>
+                        <a href="om.html">MATERIALER</a>
+                    </div>
+                </li>
+                <li class="drop-down"><a href="galleri.html">GALLERI</a>
+
+                </li>
+                <li class="drop-down">
+                    <a href="webshop.html">WEBSHOP</a>
+                </li>
+
+            </ul>
+
+
+        </nav>
+    </header>
+
+    <div class="om">
+        <div class="omtxt"></div>
+        <div class="ombillede"><img src="" alt=""></div>
+
+    </div>
+
+
+    <!--*********FOOTER*********-->
+
+    <footer class="flex-rw">
+
+        <ul class="footer-list-top">
+            <li>
+                <h3 class="footer-list-header"> ILLUSTRATIONER</h3>
+            </li>
+            <li><a href="webshop.html" class="generic-anchor footer-list-anchor" itemprop="significantLink">WEBSHOP</a></li>
+            <li><a href="galleri.html" class="generic-anchor footer-list-anchor" itemprop="significantLink">GALLERI</a></li>
+
+
+        </ul>
+        <ul class="footer-list-top">
+
+            <h3 class="footer-list-header">KONTAKT</h3>
+
+
+            <p>
+                SISSEL GEYTI ILLUSTRATIONER<br>
+                Skanderborg<br>
+                8660 <br><br>
+                Telefon +45 60 65 33 62<br> Telefonen er åben mandag til fredag<br>
+                fra kl. 9.00 til 15.00<br><br>
+                Special bestillinger modtages på mail:<br>
+                Sissel@geyti.illustationer.dk
+            </p>
+
+        </ul>
+        <ul class="footer-list-top">
+            <li id='help'>
+                <h3 class="footer-list-header">FØLG MIG PÅ</h3>
+            </li>
+            <span class="footer-social-overlap">
+                <a href="https://www.facebook.com/Sissel-Geyti-135717487120156/" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/sissel_geyti/?hl=da" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
+            </span><br><br><br><br><br>
+            <div class="search-box">
+                <input type="search" id="search" placeholder="Search..." />
+            </div>
+        </ul>
+    </footer>
+
+
+    <script>
+        /*   window.addEventListener("load", sidenVises);
+
+        function sidenVises() {
+            console.log("siden vises!")
+
+            //Ved klik på burgermenuen gå til funktionen toggleMenu
+            document.querySelector("#menuknap-mobile").addEventListener("click", toggleMenu);
+
+        }
+
+
+        function toggleMenu() {
+            document.querySelector("#mobile-nav").classList.toggle("hidden");
+
+
+            let erSkjult = document.querySelector("#mobile-nav").classList.contains("hidden");
+
+            if (erSkjult == true) {
+                document.querySelector("#menuknap-mobile").textContent = "☰";
+            } else {
+                document.querySelector("#menuknap-mobile").innerHTML = "&times;";
+            }
+        }*/
+        let indhold;
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+
+
+        function visIndhold() {
+
+            document.querySelector(".omtxt").innerHTML = indhold.beskrivelse1;
+            document.querySelector(".ombillede").SRC = indhold.billede1;
+
+
+        }
+
+        //hent JSON fil i asynkron funktion
+        async function hentJson() {
+            let url = "http://oliviahonore.dk/kea/2semeksamen/wordpress/wp-json/wp/v2/om/20";
+            //henter data filen
+            let myJson = await fetch(url);
+            //den hentede json filen skal tolkes som json
+            indhold = await myJson.json();
+            //Kald funktionen som viser data i DOM
+            visIndhold();
+
+        }
+    </script>
+</body>
+
+</html>

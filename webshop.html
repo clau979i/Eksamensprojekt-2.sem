@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attraktionen Koldkrigsmuseum Kalklandet</title>
+    <link rel="stylesheet" href="index-style.css">
+    <link rel="stylesheet" href="koldkrigsmuseum.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id="bg-kkm">
+    <header>
+        <div id="logo-sissel">
+            <a href="index.html">
+                <img src="img/headerdarkgreen.svg" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <div id="menuknap-mobile">☰</div>
+            <ul id="mobile-nav" class="hidden">
+                <li class="drop-down">
+                    <span>Galleri</span>
+                    <a href="ubegraensetoplag.html">Ubegrænset oplag</a>
+                    <a href="specialoplag.html">Special oplag</a>
+                    <a href="originaler.html">Originaler</a>
+
+                </li>
+                <li class="drop-down"><span><a href="galleri.html">Galleri</a></span>
+                    <a href="galleri.html">
+                        Galleri</a>
+
+                </li>
+
+                <li class="drop-down">
+                    <span>Om</span>
+                    <a href="om.html">Hvem er jeg?</a>
+                    <div class="dropdown-content">
+                        <a href="om.html">Hvem er jeg?</a>
+                        <a href="om.html"></a>
+                    </div>
+                </li>
+                <li class="drop-down"><span><a href="kontakt.html">Kontakt</a></span>
+
+                </li>
+            </ul>
+
+            <ul id="desktop">
+                <li class="drop-down"><a href="kontakt.html">Kontakt</a>
+
+
+                </li>
+                <li class="drop-down">
+                    <a href="om.html">Om</a>
+                    <div class="dropdown-content">
+                        <a href="om.html">Hvem er jeg?</a>
+                        <a href="om.html">MATERIALER</a>
+                    </div>
+                </li>
+                <li class="drop-down"><a href="galleri.html">GALLERI</a>
+
+                </li>
+                <li class="drop-down">
+                    <a href="webshop.html">WEBSHOP</a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <div class="slideshow-container">
+        <div id="forside-content" class="hidden">
+            <h1 class="overskrift">
+            </h1>
+            <p class="indhold">
+            </p>
+        </div>
+
+        <img src="img/koldkrigsbesk%C3%A5ret.png">
+
+    </div>
+
+    <h1 class="besog">KOLDKRIGSMUSEUM STEVNSFORT</h1>
+    <div id="bannerIkoner">
+
+        <div id="aabningstider-kkm" class="muse">
+            <div class="kkm-overlay">
+                <div class="aabning-text">
+                    <p>Alle dage<br> 11.00-15.00
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#kkm-aktuelt">
+            <div id="aktuelt-kkm-ikon" class="muse">
+                <div class="kkm-overlay2">
+                    <div class="aktuelt-text">
+                        <p>KLIK HER</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+
+
+
+        <div id="billetter-kkm" class="muse">
+            <div id="billetter-kkm-ikon" class="muse">
+                <div class="kkm-overlay3">
+                    <div class="billetter-text">
+                        <p>Voksne: 60 kr. <br> Pens: 50 kr <br>
+                            Stud: 50 kr. <br>
+                            0-17 år: Gratis </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="findvej-kkm" class="muse">
+            <div id="findvej-kkm-ikon" class="muse">
+                <div class="kkm-overlay4">
+                    <div class="findvej-text">
+                        <p>Koldkrigsmuseum Stevnsfort<br>
+                            Korsnæbsvej 60<br>
+                            4673 Rødvig
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="text-box-kkm">
+        <h3 class="intro-overskrift-kkm"></h3>
+        <p class="intro-tekst-kkm"></p>
+    </div>
+
+    <h1 id="kkm-aktuelt">AKTUELT PÅ KOLDKRIGSMUSEUM</h1>
+
+    <!--Tomme sectioner - indhentes dynamiskt med json -->
+    <section class="aktuelt-section"></section>
+
+    <!-- Indholdet i template-tagget skal klones med WP  -->
+    <template id="aktuelt-kkm">
+        <article class="enkel">
+            <!--Hver enkelt artikel skal have samme struktur og layout  -->
+            <div class="column-left">
+                <h2 id="aktuelt-overskrift"></h2>
+                <!-- Paragraf-teksten deles op i sektioner -->
+                <p class="text1"></p>
+                <p class="text2"></p>
+                <p class="text3"></p>
+                <button class="kkm-btn">LÆS MERE</button>
+            </div>
+            <!-- billedet placeres i en egne column fordi den skal placeres til højre fra teksten -->
+            <div class="column-right">
+                <img>
+            </div>
+        </article>
+    </template>
+
+
+
+
+    <footer class="flex-rw">
+
+        <ul class="footer-list-top">
+            <li>
+                <h3 class="footer-list-header"> ILLUSTRATIONER</h3>
+            </li>
+            <li><a href="webshop.html" class="generic-anchor footer-list-anchor" itemprop="significantLink">WEBSHOP</a></li>
+            <li><a href="galleri.html" class="generic-anchor footer-list-anchor" itemprop="significantLink">GALLERI</a></li>
+
+
+        </ul>
+        <ul class="footer-list-top">
+
+            <h3 class="footer-list-header">KONTAKT</h3>
+
+
+            <p>
+                SISSEL GEYTI ILLUSTRATIONER<br>
+                Skanderborg<br>
+                8660 <br><br>
+                Telefon +45 60 65 33 62<br> Telefonen er åben mandag til fredag<br>
+                fra kl. 9.00 til 15.00<br><br>
+                Special bestillinger modtages på mail:<br>
+                Sissel@geyti.illustationer.dk
+            </p>
+
+        </ul>
+        <ul class="footer-list-top">
+            <li id='help'>
+                <h3 class="footer-list-header">FØLG MIG PÅ</h3>
+            </li>
+            <span class="footer-social-overlap">
+                <a href="https://www.facebook.com/Sissel-Geyti-135717487120156/" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/sissel_geyti/?hl=da" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
+            </span><br><br><br><br><br>
+            <div class="search-box">
+                <input type="search" id="search" placeholder="Search..." />
+            </div>
+        </ul>
+    </footer>
+
+    <script>
+        window.addEventListener("load", sidenVises);
+
+        function sidenVises() {
+            console.log("siden vises!")
+            document.querySelector("#menuknap-mobile").addEventListener("click", toggleMenu);
+
+        }
+
+        function toggleMenu() {
+            document.querySelector("#mobile-nav").classList.toggle("hidden");
+
+
+            let erSkjult = document.querySelector("#mobile-nav").classList.contains("hidden");
+
+            if (erSkjult == true) {
+                document.querySelector("#menuknap-mobile").textContent = "☰";
+            } else {
+                document.querySelector("#menuknap-mobile").innerHTML = "&times;";
+            }
+        }
+
+        let intro;
+
+        //Tomt array - her skal artiklerne til de aktuelle udstillinger hentes med hjælp af json fra wordpress
+        let aktuelt = [];
+        let filter = "alle";
+
+        //Når dommet er loadet, kaldt funktionen start
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            async function hentJson() {
+                const url = "http://greif.nu/kea/2-semester/tema7/projektKalklandetWP/wordpress/wp-json/wp/v2/koldkrigsmuseum";
+
+                //henter data filen
+                const myJson = await fetch(url);
+
+
+                //den hentede json filen skal tolkes som json
+                aktuelt = await myJson.json();
+
+                //Kald funktionen som viser data i DOM
+                visAktuelt();
+            } //hent JSON fil i asynkron funktion
+
+            function visAktuelt() {
+                let dest = document.querySelector(".aktuelt-section");
+                let temp = document.querySelector("#aktuelt-kkm");
+                console.log(temp);
+
+                // Det tomme array bliver fyldt med indhold
+                aktuelt.forEach(aktuel => {
+                    //Kloning af template-taggets indhold
+                    let klon = temp.cloneNode(true).content;
+                    klon.querySelector("h2").innerHTML = aktuel.title.rendered;
+                    klon.querySelector(".text1").innerHTML = aktuel.text1;
+                    klon.querySelector(".text2").innerHTML = aktuel.text2;
+                    klon.querySelector(".text3").innerHTML = aktuel.text3;
+                    klon.querySelector("img").src = aktuel.billede.guid;
+                    //Tilføjer klonen til variablen dest (sectionen)
+                    dest.appendChild(klon);
+
+                })
+            }
+            //Henter og viser den dynamiske datan fra WP
+            hentJson();
+
+            async function hentJson2() {
+                let url = "http://greif.nu/kea/2-semester/tema7/projektKalklandetWP/wordpress/wp-json/wp/v2/pages/188"
+                let jsonData = await fetch(url);
+                intro = await jsonData.json();
+                visIntro();
+            };
+
+            function visIntro() {
+                document.querySelector(".intro-overskrift-kkm").textContent = intro.title.rendered;
+                document.querySelector(".intro-tekst-kkm").innerHTML = intro.content.rendered;
+            }
+            hentJson2();
+        }
+    </script>
+</body>
+
+</html>

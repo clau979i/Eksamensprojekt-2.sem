@@ -1,0 +1,476 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    font-size: 100%;
+    background-color: #E1D9D6;
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 100%;
+
+}
+
+
+/*
+#logo-sissel img {
+    width: 110%;
+}
+
+#logo-sissel {
+    position: fixed;
+    z-index: 1000;
+}
+*/
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+span {
+    font-family: 'Cantarell', sans-serif;
+}
+
+p {
+    font-family: 'Cantarell', sans-serif;
+}
+
+a,
+button,
+span,
+    {
+    font-family: 'Cantarell', sans-serif;
+}
+
+
+/*******************BURGERMENU********************/
+
+/*Burgermenuen vises kun i mobile*/
+#menuknap-mobile {
+    width: 1.5em;
+    /* størrelsen på burgermenu-knappen */
+    height: 1em;
+    /* størrelsen på burgermenu-knappen */
+    font-size: 1.4em;
+    align-items: center;
+    position: fixed;
+    /* burgermenuen skal være fixed i toppen af sitet hele tiden */
+    right: 1vw;
+    top: 1vw;
+    color: #F2F2F2;
+    z-index: 10001;
+    cursor: pointer;
+}
+
+/* Container for menuen */
+#mobile-nav {
+
+    width: 100%;
+    /* Menuen skal fylde helt ud til siden */
+    height: 500px;
+    list-style-type: none;
+    position: fixed;
+    /* menuen er placeret i toppen af sitet hele tiden */
+    top: 5.3vw;
+    display: grid;
+    /* Menupunkterne placeres under hinanden */
+    background-color: #202626;
+    padding-top: 5vw;
+    z-index: 2000;
+    /* Et højt tal i z-index gør så at menuen altid placeres over alle andre elementer på sitet */
+}
+
+#mobile-nav .drop-down {
+
+    background-color: #202626;
+    color: #F2F2F2;
+}
+
+#mobile-nav span {
+    font-size: 5vw;
+    font-weight: bold;
+    text-decoration: underline;
+
+
+}
+
+#mobile-nav a {
+    display: block;
+    color: #F2F2F2;
+    text-decoration: none;
+    padding: 1vw;
+    font-family: 'Cantarell', sans-serif;
+}
+
+
+
+.drop-down {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #202626;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #202626;
+    min-width: 160px;
+
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown-content li {
+    float: left;
+}
+
+.drop-down:hover .dropdown-content {
+    display: block;
+}
+
+/********************MENU DESKTOP**********************/
+
+.hidden {
+    transform: scale(0);
+}
+
+/* menuen til desktop er som udgangspunkt lukket fordi vi koder mobile-first */
+#desktop {
+    display: none;
+}
+
+/* Links inde i navbaren */
+#desktop a {
+    display: block;
+    position: relative;
+}
+
+#desktop .drop-down {
+    float: right;
+    /* menupunkterne skal placeres til højre */
+    position: relative;
+    padding-right: 5vw;
+    right: 4vw;
+    top: 0.7vw;
+    text-transform: uppercase;
+    list-style-type: none;
+    font-size: 1.5vw;
+    font-family: 'Cantarell', sans-serif;
+}
+
+#desktop .dropdown-content {
+    font-size: 1.2vw;
+
+}
+
+/* Links on mouse-over */
+#desktop .drop-down a:hover {
+    color: white;
+    border-bottom-style: solid;
+}
+
+/* Style the active/current link */
+#desktop .drop-down a.active {
+    border-bottom-style: solid;
+    color: #F15A25;
+}
+
+#desktop span {
+    font-weight: bold;
+}
+
+#desktop a {
+    text-decoration: none;
+    color: #F2F2F2;
+    margin: 0.5vw 1vw;
+}
+
+#desktop .drop-down:hover {
+    color: orange;
+    cursor: pointer;
+    transform: scale(2vw);
+}
+
+#desktop .drop-down a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #F2F2F2;
+    transition: width .3s;
+    cursor: pointer;
+}
+
+
+
+#desktop .drop-down a:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+
+
+#forside-content {
+    margin: 5vw;
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.38);
+    position: absolute;
+    top: 10vw;
+}
+
+#forside-content .overskrift {
+    text-align: center;
+    color: #F2F2F2;
+}
+
+#forside-content .indhold {
+    color: #F2F2F2;
+    text-align: center;
+}
+
+
+
+/********** SPLASH VIDEO ***************/
+
+ h3 {
+        margin-top: 1rem;
+    }
+        .wrap {
+
+
+            margin-bottom: 1rem;
+        }
+
+        .titel {
+            color: #55798e;
+        }
+        .titel2 {
+            color: #54a29e;
+        }
+        .titel3 {
+            color: #0082ad;
+        }
+        .post:nth-child(1) {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .post:nth-child(2) {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .wrap img {
+            grid-column: 1;
+            grid-row: 1;
+            padding: 0 1.5rem 0 1.5rem;
+            width: 70%;
+        }
+        @media only screen and (min-width: 667px){
+            .wrap img {
+
+            padding: 0 1.5rem 0 1.5rem;
+            width: 80%;
+        }
+            .wrap {
+
+            margin: 0 5rem 0 5rem;
+            margin-bottom: 1rem;
+        }
+        .post:nth-child(1) {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .post:nth-child(2) {
+            max-width: 300px;
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .wrap img {
+            grid-column: 1;
+            grid-row: 1;
+            padding: 0 1.5rem 0 1.5rem;
+            width: 85%;
+        }
+
+        }
+    @media only screen and (min-width: 1024px){
+        nav {
+            position: static;
+        }
+
+
+        #myVideo {
+        position: absolute;
+
+
+        width: 100%;
+        height: 110%;
+        z-index: -10;
+        margin-top: 0px;
+        pointer-events: none;
+
+    }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        h3 {
+            margin-top: 1rem;
+        }
+
+    #splashvideo img {
+        width: 100%;
+    }
+        .post {
+            padding: 0 1.5rem 0 1.5rem;
+        }
+        .wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            margin: 0 5rem 0 5rem;
+            margin-bottom: 1rem;
+        }
+        .post:nth-child(1) {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .post:nth-child(2) {
+            grid-column: 2;
+            grid-row: 1;
+            max-width: none;
+        }
+        .wrap img {
+            grid-column: 1;
+            grid-row: 1;
+            padding: 0 1.5rem 0 1.5rem;
+            width: 85%;
+        }
+
+/************ SLIDESHOW SLUT *****************/
+
+
+
+
+/*************FOOTER***************/
+
+.flex-rw {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+footer {
+    background: #A6926D;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer-list-top > li {
+    padding-bottom: 10px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+.footer-list-top > li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #F2F2F2;
+    transition: width .3s;
+}
+
+
+.footer-list-top > li:hover::after {
+    width: 50%;
+    //transition: width .3s;
+}
+
+.footer-list-top a {
+    text-decoration: none;
+    color: #F2F2F2;
+    font-family: 'Cantarell', sans-serif;
+}
+
+.footer-list-header {
+    padding: 10px 0 5px 0;
+    color: #fff;
+    font-family: 'Cantarell', sans-serif;
+}
+
+.footer-list-top p {
+    color: #F2F2F2;
+}
+
+.footer-social-overlap {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    z-index: 2;
+    justify-self: start;
+    font-size: 6vw;
+}
+
+
+/************ MEDIA QUERIES DESKTOP ******************/
+@media only screen and (min-width: 992px) {
+
+    #logo-kalklandet img {
+        width: 110%;
+    }
+
+    #mobile-nav {
+        display: none;
+    }
+
+
+    #desktop {
+        display: block;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2010;
+        float: right;
+
+    }
+
+    #desktop .drop-down {
+        color: #F2F2F2;
+        background-color: #202626;
+    }
+
+    #menuknap-mobile {
+        display: none;
+    }
+
+
+
+
+    footer.flex-rw {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    .footer-social-overlap i {
+        font-size: 3vw;
+    }
+
+    .footer-list-header {
+        font-size: 1.5em;
+    }

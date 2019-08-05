@@ -1,0 +1,85 @@
+/*************OM-SIDEN*******************/
+
+
+.om {
+    text-decoration: none;
+    padding: 150px;
+    color: black;
+    font-size: 30px;
+    max-width: 1200px;
+    min-width: 600px;
+    justify-content: center;
+}
+
+
+/************ MEDIA QUERIES DESKTOP ******************/
+@media only screen and (min-width: 992px) {
+
+    #logo-sissel img {
+        width: 110%;
+    }
+
+    #mobile-nav {
+        display: none;
+    }
+
+
+    #desktop {
+        display: block;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2010;
+        float: right;
+
+    }
+
+    #desktop .drop-down {
+        color: white;
+
+    }
+
+    #menuknap-mobile {
+        display: none;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+    .column-right {
+        justify-self: end;
+        border-style: none;
+        padding-right: 5vw;
+    }
+
+    .tekst-omos {
+        padding: 2em 2em 1em;
+        position: absolute;
+        top: 6vw;
+        background-color: rgba(0, 0, 0, 0.38);
+        color: white;
+        left: 25vw;
+        border-width: 5px;
+        border-style: double;
+        border-color: #E1D9D6;
+    }
+
+
+    #omos-main {
+        margin-top: 0;
+        grid-template-columns: auto 600px auto;
+        grid-column-start: 2;
+    }
+
+    #kontakt-main {
+        margin-top: 0;
+    }
+
+    #tekst-omos {
+        margin-left: 10vw;
+    }
+
+
+
