@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -84,7 +86,7 @@ span,
     top: 5.3vw;
     display: grid;
     /* Menupunkterne placeres under hinanden */
-    background-color: #202626;
+    background-color: rgba(32, 38, 38, 0.2);
     padding-top: 5vw;
     z-index: 2000;
     /* Et højt tal i z-index gør så at menuen altid placeres over alle andre elementer på sitet */
@@ -92,7 +94,7 @@ span,
 
 #mobile-nav .drop-down {
 
-    background-color: #202626;
+    background-color: rgba(32, 38, 38, 0.71);
     color: #F2F2F2;
 }
 
@@ -148,13 +150,28 @@ span,
 /* menuen til desktop er som udgangspunkt lukket fordi vi koder mobile-first */
 #desktop {
     display: none;
+    color: #F2F2F2;
+        background-color: #202626;
+    position: fixed;
+    z-index: 999;
+    padding-top: .1em;
+    padding-bottom: .1em;
+
+
 }
 
 /* Links inde i navbaren */
 #desktop a {
-    display: block;
     position: relative;
+    cursor: pointer;
+
 }
+#desktop img {
+    width: 100%;
+    max-width: 150px;
+
+}
+
 
 #desktop .drop-down {
     float: right;
@@ -162,10 +179,10 @@ span,
     position: relative;
     padding-right: 5vw;
     right: 4vw;
-    top: 0.7vw;
+
     text-transform: uppercase;
     list-style-type: none;
-    font-size: 1.5vw;
+    font-size: 1.2em;
     font-family: 'Cantarell', sans-serif;
 }
 
@@ -174,10 +191,20 @@ span,
 
 }
 
+#desktop li {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+
+}
+
+
+
 /* Links on mouse-over */
 #desktop .drop-down a:hover {
     color: white;
-    border-bottom-style: solid;
+
 }
 
 /* Style the active/current link */
@@ -218,6 +245,7 @@ span,
     width: 100%;
     //transition: width .3s;
 }
+
 
 
 #forside-content {
@@ -446,15 +474,17 @@ footer {
         z-index: 2010;
         float: right;
 
+
     }
 
     #desktop .drop-down {
-        color: #F2F2F2;
-        background-color: #202626;
+
     }
 
     #menuknap-mobile {
         display: none;
+        width: 100vw;
+
     }
 
 
@@ -473,4 +503,9 @@ footer {
 
     .footer-list-header {
         font-size: 1.5em;
+    }
+
+    header {
+        position:fixed;
+        z-index: 999;
     }
