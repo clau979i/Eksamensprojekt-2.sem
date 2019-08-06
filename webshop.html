@@ -73,6 +73,7 @@
         <div class="produkt-container"></div>
     <template>
         <div class="produkt">
+        <div class="produkt-img"></div>
         <h2></h2>
         <p></p>
         </div>
@@ -115,7 +116,7 @@
                 let temp = document.querySelector("template");
              webshop.forEach( produkt => {
                     let klon = temp.cloneNode(true).content;
-                klon.querySelector(".produkt").style.backgroundImage = `url(${produkt.billede.guid})`;
+                klon.querySelector(".produkt-img").style.backgroundImage = `url(${produkt.billede.guid})`;
                     klon.querySelector("h2").innerHTML = produkt.title.rendered;
                     klon.querySelector("p").innerHTML = produkt.pris +" kr.";
                  console.log(produkt.billede.guid);
