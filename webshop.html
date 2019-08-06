@@ -4,15 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attraktionen Koldkrigsmuseum Kalklandet</title>
+    <title>Webshop</title>
     <link rel="stylesheet" href="index-style.css">
-    <link rel="stylesheet" href="koldkrigsmuseum.css">
+    <link rel="stylesheet" href="webshop.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
+
+
+
 <body id="bg-kkm">
+
+
+
     <header>
+
+
+
 
         <nav>
             <div id="menuknap-mobile" >☰</div>
@@ -70,6 +79,78 @@
 
         </nav>
     </header>
+
+
+
+        <div class="produkt-container"></div>
+    <template>
+        <div class="produkt">
+        <h2></h2>
+        <p></p>
+        </div>
+    </template>
+
+
+
+    <script>
+        window.addEventListener("load", sidenVises);
+
+        function sidenVises() {
+            console.log("siden vises!")
+
+            //Ved klik på burgermenuen gå til funktionen toggleMenu
+            document.querySelector("#menuknap-mobile").addEventListener("click", toggleMenu);
+
+        }
+
+
+        function toggleMenu() {
+            document.querySelector("#mobile-nav").classList.toggle("hidden");
+
+
+            let erSkjult = document.querySelector("#mobile-nav").classList.contains("hidden");
+
+            if (erSkjult == true) {
+                document.querySelector("#menuknap-mobile").textContent = "☰";
+            } else {
+                document.querySelector("#menuknap-mobile").innerHTML = "&times;";
+            }
+        }
+        let webshop;
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            function visIndhold() {
+                let dest = document.querySelector(".produkt-container");
+                let temp = document.querySelector("template");
+             webshop.forEach( produkt => {
+                    let klon = temp.cloneNode(true).content;
+                klon.querySelector(".produkt").style.backgroundImage = `url(${produkt.billede.guid})`;
+                    klon.querySelector("h2").innerHTML = produkt.title.rendered;
+                    klon.querySelector("p").innerHTML = produkt.pris;
+                 console.log(produkt.billede.guid);
+                    dest.appendChild(klon);
+                })
+            }
+
+            //hent JSON fil i asynkron funktion
+            async function hentJson() {
+                let url = "http://oliviahonore.dk/kea/2semeksamen/wordpress/wp-json/wp/v2/webshop";
+                //henter data filen
+                let myJson = await fetch(url);
+                //den hentede json filen skal tolkes som json
+                webshop = await myJson.json();
+                //Kald funktionen som viser data i DOM
+                visIndhold();
+            }
+            hentJson();
+
+
+
+        }
+    </script>
 </body>
 
 </html>
