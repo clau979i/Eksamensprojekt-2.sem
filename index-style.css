@@ -21,16 +21,6 @@ img {
 }
 
 
-/*
-#logo-sissel img {
-    width: 110%;
-}
-
-#logo-sissel {
-    position: fixed;
-    z-index: 1000;
-}
-*/
 
 
 
@@ -405,7 +395,12 @@ footer {
     background: #A6926D;
     margin-top: auto;
     width: 100%;
+
+
 }
+.footer-list-top {
+    padding-left: 15px;
+        }
 
 .footer-list-top > li {
     padding-bottom: 10px;
