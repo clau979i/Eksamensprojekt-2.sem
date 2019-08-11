@@ -5,48 +5,97 @@
     padding: 0;
 }
 
-.om {
+.om,
+.omtxt{
     text-decoration: none;
-    padding: 150px;
+    padding-top: 7vh;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    padding-bottom: 3vh;
     color: black;
-    font-size: 30px;
-    max-width: 1200px;
-    min-width: 600px;
+    font-size: 20px;
     justify-content: center;
+    border: 2px solid #333;
+}
+
+.ombillede {
+    margin-top: 10vw;
 }
 
 #menuknap-mobile {
     color: black;
 }
 
+@media only screen and (min-width: 700px) {
 
-/************ MEDIA QUERIES DESKTOP ******************/
+    .om,
+.omtxt{
+    text-decoration: none;
+    padding-top: 5vh;
+    padding-right: 12vw;
+    padding-left: 12vw;
+    padding-bottom: 3vh;
+    color: black;
+    font-size: 23px;
+    justify-content: center;
+    border: 2px solid #333;
+}
+
+.ombillede {
+    margin-top: 2vw;
+}
+}
+
+
+
 @media only screen and (min-width: 1000px) {
 
-    .container-om {
-        display:grid;
-        justify-content: center;
-
-    }
-
-    .om {
+.om,
+.omtxt{
     text-decoration: none;
+    padding-top: 5vh;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    padding-bottom: 3vh;
     color: black;
     font-size: 30px;
-    max-width: 1200px;
-    display: flex;
-    justify-items: center;
+    justify-content: center;
+    border: 2px solid #333;
+}
 
+.ombillede {
+    margin-top: 2vw;
+}
 }
 
 
-    .container-footer {
+@media only screen and (min-width: 1900px) {
 
-         display: flex;
+
+
+
+    .om {
+            display:grid;
     justify-items: center;
     }
 
+.om,
+.omtxt{
+    text-decoration: none;
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+    color: black;
+    font-size: 30px;
+    justify-content: center;
+    border: 2px solid #333;
 }
+
+    .ombillede {
+    margin-top: 2vw;
+        max-width: 25vw;
+
+}
+
 
 
 

@@ -26,7 +26,6 @@ display: grid;
 
 .billed {
     width: 100%;
-    min-width: 200px;
     max-width: 350px;
     margin-bottom: 4vw;
 
@@ -59,32 +58,16 @@ display: grid;
     column-gap: 2vw;
         width: 100%;
     column-gap: none;
-
      margin-bottom: 2vw;
 
     }
 
 
-.produkt-img {
-            width: 300px;
-            height: 400px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-
-            padding-left: 2vw;
-
-
-                     }
-
       .billed {
-    width: 100%;
-    min-width: 400px;
     max-width: 500px;
     margin-bottom: 2vw;
     padding-top: 2vw;
 
-    display: flex;
 
 
    }
