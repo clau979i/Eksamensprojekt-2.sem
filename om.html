@@ -59,15 +59,17 @@
         </nav>
     </header>
 
+   <div class="container-om">
     <div class="om">
         <div class="omtxt"></div>
-        <div class="ombillede"><img src="" alt=""></div>
+        <div class="ombillede"><img src="" alt="" class="billede"></div>
 
+    </div>
     </div>
 
 
     <!--*********FOOTER*********-->
-
+<div class="container-footer">
     <footer class="flex-rw">
 
         <ul class="footer-list-top">
@@ -108,6 +110,7 @@
             </div>
         </ul>
     </footer>
+    </div>
 
 
     <script>
@@ -143,7 +146,7 @@
         function visIndhold() {
 
             document.querySelector(".omtxt").innerHTML = indhold.beskrivelse1;
-            document.querySelector(".ombillede").SRC = indhold.billede1;
+            document.querySelector(".billede").src = indhold.billede1.guid;
 
 
         }

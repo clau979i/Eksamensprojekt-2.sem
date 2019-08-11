@@ -3,6 +3,8 @@
     padding: 0;
 }
 
+
+
 .grid {
 
 
@@ -39,8 +41,14 @@
           padding-left: 2vw;
       }
 
+.produkt-img:hover,
+.produkt h2,
+.produkt p {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+   }
 
-  @media only screen and (min-width: 1000px) {
+  @media only screen and (min-width: 1025px) {
 
 .produkt-container {
       grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
@@ -51,7 +59,7 @@
     }
         .produkt-img {
             width: 300px;
-            height: 300px;
+            height: 400px;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -68,43 +76,6 @@
       }
 
       }
-
-      @media only screen and (min-width: 2000px) {
-
-.produkt-container {
-      grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
-        margin: 0;
-    column-gap: none;
-        width: 100%;
-
-
-    }
-
-         }
-/*
-.produkt-img {
-            width: 600px;
-            height: 600px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            padding-left: 2vw;
-                     }
-*/
-/*
-
- .produkt {
-          margin-bottom: 20px;
-      }
-      .produkt h2,
-      .produkt p {
-          padding-left: 3vw;
-      }
-*/
-
-#menuknap-mobile {
-    color: black;
-}
 
 
 

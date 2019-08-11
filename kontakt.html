@@ -59,6 +59,18 @@
         </nav>
     </header>
 
+<div class="container-kontakt">
+   <main>
+       <p>SEND E-MAIL</p>
+       <form class="contact-form" action="contactform.php" methid="post">
+           <input type="text" name="navn" placeholder="Fuldt navn">
+           <input type="text" name="mail" placeholder="Din e-mail">
+           <input type="text" name="emne" placeholder="Emne">
+           <textarea name="meddelse" placeholder="Meddelelse"></textarea>
+           <button type="submit" name="indsend">SEND MAIL</button>
+       </form>
+   </main>
+   </div>
 
 
     <footer class="flex-rw">
@@ -101,28 +113,7 @@
             </div>
         </ul>
     </footer>
-    <script>
-        window.addEventListener("load", sidenVises);
 
-        function sidenVises() {
-            console.log("siden vises!")
-            document.querySelector("#menuknap-mobile").addEventListener("click", toggleMenu);
-
-        }
-
-        function toggleMenu() {
-            document.querySelector("#mobile-nav").classList.toggle("hidden");
-
-
-            let erSkjult = document.querySelector("#mobile-nav").classList.contains("hidden");
-
-            if (erSkjult == true) {
-                document.querySelector("#menuknap-mobile").textContent = "☰";
-            } else {
-                document.querySelector("#menuknap-mobile").innerHTML = "&times;";
-            }
-        }
-    </script>
 </body>
 
 </html>

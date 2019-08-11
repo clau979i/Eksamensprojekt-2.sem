@@ -1,5 +1,9 @@
 /*************OM-SIDEN*******************/
 
+* {
+    margin: 0;
+    padding: 0;
+}
 
 .om {
     text-decoration: none;
@@ -17,9 +21,32 @@
 
 
 /************ MEDIA QUERIES DESKTOP ******************/
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1000px) {
+
+    .container-om {
+        display:grid;
+        justify-content: center;
+
+    }
+
+    .om {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    max-width: 1200px;
+    display: flex;
+    justify-items: center;
+
+}
 
 
+    .container-footer {
+
+         display: flex;
+    justify-items: center;
+    }
+
+}
 
 
 

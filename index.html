@@ -160,18 +160,7 @@
         }
 
 
-        async function hentJson() {
-            let url = "http://greif.nu/kea/2-semester/tema7/projektKalklandetWP/wordpress/wp-json/wp/v2/pages/110"
-            let jsonData = await fetch(url);
-            intro = await jsonData.json();
-            visIntro();
-        };
 
-        function visIntro() {
-            document.querySelector(".start-headline").textContent = intro.title.rendered;
-            document.querySelector(".start-tekst").innerHTML = intro.content.rendered;
-        }
-        hentJson();
     </script>
 
 </body>
